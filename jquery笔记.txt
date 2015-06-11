@@ -309,6 +309,16 @@ jQuery(document).read(function(){})
 	: after
 	: before
 	: selection
+
+jQuery  过滤选择器
+	:first
+	:last
+	:eq()
+	:gt()
+	:lt()
+
+
+
 	
 
 
