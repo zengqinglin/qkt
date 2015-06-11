@@ -299,6 +299,17 @@ jQuery(document).read(function(){})
 	：first-child
 	：last-child
 	：only-child
+	：first-of-type
+	：last-of-type
+	: nth-child(n)
+	: nth-child(2n)
+	: nth-of-type(2)
+	: nth-of-type(2n)
+	: not()
+	: after
+	: before
+	: selection
+	
 
 
 
