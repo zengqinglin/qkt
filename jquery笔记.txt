@@ -293,7 +293,12 @@ jQuery(document).read(function(){})
 	a`b       h3 `p   在h3后面的所有 是p的兄弟元素（多个）
 	
 
-
+过滤选择器
+	：first-letter
+	：first-line
+	：first-child
+	：last-child
+	：only-child
 
 
 
