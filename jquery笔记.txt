@@ -299,6 +299,9 @@ jQuery(document).read(function(){})
 	：first-child
 	：last-child
 	：only-child
+	：first-of-type
+	：last-of-type
+	
 
 
 
