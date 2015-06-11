@@ -316,10 +316,7 @@ jQuery  过滤选择器
 	:eq()
 	:gt()
 	:lt()
-	:header();
-	:odd
-	:event
-	:animate
+
 
 
 	
