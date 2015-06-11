@@ -1,0 +1,377 @@
+﻿------------------------------
+
+str.length
+str.indexOf()
+str.replace("","");
+str.substr(3,7);
+str.substring(3,7)
+
+window.navigator.userAgent  浏览器头信息
+
+
+Math.PI
+
+Math.round();
+Math.ceil();
+Math.floor();
+Math.abs();
+Math.Max();
+Math.Min();
+Math.random();
+
+
+
+var d=new Date();
+	
+    d.getfullYear.....
+
+var w=new Date(2015,5+1,3);
+
+	getTime();
+
+w=document.body.clientWidth||document.docuElement.clientWidth||window.innerWidth;
+
+setInterval
+clearInterval
+
+setTimeout
+clearTimeout
+
+
+判断对象的数据类型
+
+typeof  obj   // number  boolean   string   数组  对象  时间  都会给出 Object
+obj instancof Array  // 任何元素 instanceof Object  都是true  
+Object.prototype.toString.call(元素)   "[object 数据类型]"
+
+
+var arr=new Array();
+var arr=new Array(3);
+var arr=new Array(3,8,9,55,true);
+var arr=[];
+var arr=["小张"，"老王","小明"];
+
+arr[1];
+arr[2]="大明";
+
+arr[25]="more";
+arr.length=3;
+arr.push("elem")；在后面添加一个
+arr.unshift("elem")在前面
+
+arr.shift()；删除前面的第一个；
+arr.pop()删除后面的
+
+arr.splice(2,1) 从第2个删除1个
+
+arr.sort(); 排序
+arr.reverse(); 反向
+
+检测数据的类型
+
+typeof
+
+arr instanceOf  Array
+
+
+Object.prototype.toString.apply(arr);
+call
+apply
+
+Math.min.apply(Array,arr); 检测数组中最小
+
+遍历
+	for（）{}
+	for（var key in arr）{
+		arr[k];
+	}
+var arr=[["王二小",8,"英雄","男"],["雷锋",28,"英雄","男"],["刘胡兰",25,"英雄","女"]];
+
+arr[2][0] 访问二维数组
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------js
+
+js引用方式：
+	1，<script type="text/javascript" language="javascript"></script>
+	2,<script>alert("22");</script>
+	3,<h2 onClick="alert('abc')"></h2>
+--------------------------------------------------------小学生+-* /
+
+
+	1，变量： 存取数据的容器
+	   命名：字母数字_ $ 不能是数字开头 不能是关键字
+	2，js 的数据类型： 字符串 数字   布尔 undefined null   复合（对象，数组，时间 Math。。）
+	
+	3，运算  +  -  * /   ++   +=  -=  /=   *=   %
+	   比较  >   <   >=  <=  != ==    ===
+	   逻辑  &&  ||  ！
+
+	4，自动转换：
+		   1， 字符和数字相加  数字 会转换为  字符    
+			数字和字符相 - * 、  尝试把字符转换为数字  不成功  转换为 NaN
+			false   0
+			true     1
+
+			比1小的数字可以转换为 false
+			大于等于1的数字可以转换为 true
+			空的字符串 转换   false
+			非空转换为      true
+			undefined      false
+	5 ，类型判断  typeof   instanceOf        Object.prototype.toString.call(arr);    apply
+
+--------------------------------------------------------循环与分支
+
+	if(){}
+	if(){}else{}
+	if(){}else if(){} else if(){}else{};
+
+	switch(num){
+		case 1:
+		语句;
+		break;
+		case 2:
+		语句;
+		break;
+		...
+		case n:
+		语句;
+		break;
+		default:
+		语句
+	}
+
+	while（条件）{
+		语句；
+		改变条
+	}
+
+	循环操作：  1变量初始值   2循环条件   3循环语句   4 循环条件变更
+
+	如果条件不满足 一次都不做
+		
+	do{
+		语句；
+	}while（条件）
+	
+	至少会做一次；
+	
+	for（变量初始值; 循环条件；变更循环条件）{
+
+		语句
+	}
+
+break：跳出整个循环
+continue  ：跳出当前循环会一次
+
+	for循环可以嵌套
+
+	for（var i=0；i<10;i++）{
+
+		for(var j=0;j<5;j++){
+		语句
+	`	}
+	
+	}
+	
+    我们想象 2层for 循环 相当于做一个表格   第一层是走表格的  行   第二做表格的列	
+
+
+
+-------------------------------------------------------------------函数
+
+	函数的创建：
+		function name（）{  语句；}
+		var myname= function（）{ 语句}  要先创建在调用
+		（function(){alert(i)}）(i); 创建立即调用 匿名函数
+		！function（）{}（）
+	函数的调用：
+			1，函数名（） ：  name（）；
+			2，把函数名给一个事件    elem.onclick=name;   function name(){};
+				elem.onclick=function(){}
+			3,在html 调用   <h2 onclick="name()">test</h2>
+			4,dom 2 级方式    事件监听方式      elem.addEventListener("click",name,"false");
+			                   解除监听     	elem.removeEventListener("click",name,"false");  
+	函数的参数：
+			function add(a,b){
+				alert(a+b);
+			}
+			
+			add(5,10);//15
+			arguments 函数的参数列表   arguments[1] 第二个参数         arguments.length  参数长度；
+	函数的返回	functon add（a,b）{
+			return  a+b;
+			}
+			1 函数return 以后 函数后面的语句将不会执行
+			2 函数return 只能返回一条信息
+			3 默认函数return   undefined
+				
+	函数的作用域     函数里面能访问外的变量   函数外面 不能访问 里面的变量  
+			没有var 的变量 是  window 的全局变量
+			if  else  for  do while 没有作用域     里面和外面是一样的
+
+
+	函数和变量没有顺序关系 默认都会提前读取到内存中   特别是函数  先调用再声明都可以没有顺序
+		变量如果先调用 再声明默认  undefined；
+
+
+
+-----------------------------------------------------------------------js内置对象
+
+       Math
+		radom
+		PI
+		round
+		floor
+		ceil
+		abs
+		max
+		min
+
+     日期   var d=new Date();
+		get.   年  月  日 时  分秒   
+		getTime() 1970  1.1 到现在的 毫秒
+
+	    设置时间：var w=new Date（2015，7,1）；
+	
+     字符串  ：var s=“mystring”    var str=new String("有striong"); 可以动态的添加属性 并且他是一个复合对象  
+
+		str.length
+		str.indexOf()  下标   没有返回 -1 
+		window.navigator.userAgent 浏览器的头信息
+		str.replace("",""); 替换
+		str.lastIndexOf();从后面找
+		str.substr(4,7)从第4个找 7个
+		str.substring(4,7)从第4个找到第7个
+		str.substring(4)/str.substr(4)都是从第4个找到最后
+    Array
+		var arr=new Array ();
+		var arr=new Array (3);
+		var arr=new Array (7,8,5,"name",age ,true);
+		var arr=[7,8,5,"name",age ,true];
+		var arr=[];
+
+		数组的访问： arr[0]
+		长度       arr.length;
+		遍历     for（）{}； for（var k in  arr）{ console.log(arr[k])}
+		数组可以动态的更改长度
+   数组的方法
+		push 后面 加一个
+		unshift
+		pop   后面删一个
+		shift
+		splice（3,1）从第4个删除一个
+		sort
+		reserve
+		求数组最xiao   Math.min.apply(Array,arr);
+   二维数组    var arr=[["name",13,2],["name2",13,3] ,["name",18,4]]
+		arr[1][0]   name2	
+   遍历二维数组  for（）{for（）{}}
+    二维数组像表格  外面是行的意思  里面 数组是 列的意思
+
+$(function(){})
+
+
+$(document).ready(function(){})
+jQuery(document).read(function(){})
+
+
+
+
+ 层次选择
+	a  b      ul li   被ul 包含的 li元素  包括子孙元素
+	a>b       ul>li   ul的直接子元素li 不包括 子孙元素
+	a+b       h3+ul   在h3的后面的兄弟（一个）元素ul   jQ ：.next();
+	a`b       h3 `p   在h3后面的所有 是p的兄弟元素（多个）
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				
+	
+
+
+			
+
+					
+	       
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
