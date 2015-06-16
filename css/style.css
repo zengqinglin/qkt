@@ -1094,3 +1094,35 @@ a.list-praise em{
 	background-position:right top
 }
 .coment{padding-bottom:50px;}
+
+/*baseinfo*/
+#base-info{ margin-top:100px;}
+.setting-left li {
+position: relative;
+border-bottom: 1px solid #e6e8e9;
+margin-bottom: -1px;
+}
+.setting-left a {
+display: block;
+height: 59px;
+padding-left: 47px;
+line-height: 59px;
+font-size: 14px;
+color: #333;
+border-color: transparent;
+-webkit-transition: color,border-color 0.2s;
+-moz-transition: color,border-color 0.2s;
+-ms-transition: color,border-color 0.2s;
+transition: color,border-color 0.2s;
+}
+.setting-left .nav-active a {
+border-left: 2px solid #f80;
+padding-left: 45px;
+}
+.base-setting-wrap {
+position: relative;
+padding: 30px 60px;
+min-height: 600px;
+}
+.base-setting-wrap label{ color:#999; height:45px; line-height:45px;}
+.base-setting-wrap .form-control{ height:45px; line-height:45px;}
